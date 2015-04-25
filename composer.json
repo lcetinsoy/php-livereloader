@@ -17,8 +17,8 @@
         "php": ">=5.3.0"
     },    
     "scripts": {        
-        "post-package-install": "php installer.php",        
-        "post-package-update": "php installer.php"
+        "post-package-install": "php -f installer.php",        
+        "post-package-update": "php -f installer.php"
     }
    
 }
