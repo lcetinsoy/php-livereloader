@@ -19,8 +19,8 @@
     
     "scripts": {
         
-        "post-install-cmd": [
-            "installer.php"
+        "post-package-install": [
+            "php installer.php"
         ]
     }
    
