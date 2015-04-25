@@ -5,11 +5,17 @@ Warning: For developement only. To be removed from production.
 
 Installation
 
+1. Download 
+
 git clone https://github.com/lce-fr/server-livereload
 
-move to your public folder server-livereload.js and server-livereload.php
+2. Moving file to the public folder
 
-add the following lines to at the start of your php entry point file :
+php installer.php
+
+3.
+
+Add the following lines to at the start of your php entry point file:
 
 ```php
 
@@ -17,12 +23,11 @@ echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.mi
 echo '<script src="/server-livereload.js"></script>';
 
 ```
-
-go to the bottom of livereload.js file and edit folders and extensions you want to watch.
+4. Edit watching configs in livereload.js
 
 Default configuration works for symfony2.
 
-available options:
+Available options:
 
 ```javascript
 
