@@ -1,15 +1,39 @@
+var LiveReloader = function (userOptions) {
 
-var Reloadr = function (options) {
+      var options = {
+        serverPath: 'server-livereaload.php',
+        pollFrequency: 1000,
+        foldersToWatch: [
+          './',
+          '../src',
+          '../vendor',
+          '../app',
 
-    this.serverPath = options.serverPath || "index.php"
+        ],
+        extensions: [
+          'php',
+          'html.twig',
+          'css',
+          'yml',
+          'xml'
+
+        ]
+
+      }
+
+    $.merge(options, userOptions)
+
+    this.serverPath = options.serverPath
     this.foldersToWatch = options.foldersToWatch
-    this.pollFrequency = options.pollFrequency || 1000
-    this.lastLoad = Date.now()
+    this.pollFrequency = options.pollFrequency
     this.extensions = options.extensions
+
+    this.lastLoad = Date.now()
     this.init();
+
 }
 
-Reloadr.prototype = {
+LiveReloader.prototype = {
     init: function () {
         var me = this;
         this.polling = setInterval(function () {
@@ -31,7 +55,7 @@ Reloadr.prototype = {
                 me.handleResponse(data)
             },
             error: function () {
-                terminal.echo("An error occured please retry or send me a mail. Sorry.")
+                terminal.echo("An error occured please retry.")
             }
         });
 
@@ -51,18 +75,6 @@ Reloadr.prototype = {
 }
 
 
-reload = new Reloadr({
-    serverPath: '/reloadr.php',
-    foldersToWatch: [
-        '../src',
-        './',
-        '../app'
-    ],
-    extensions: [
-        'php',
-        'css',
-        'html.twig',
-        'yml'
-    ]
-});
+var reloader = new LiveReloader({
 
+});

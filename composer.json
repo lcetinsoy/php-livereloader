@@ -1,0 +1,27 @@
+{
+    "name": "lce-fr/server-livereload",
+    "type": "library",
+    "description": "PHP live reloader for browser",
+    "keywords": ["livereload","reload", "refresher", "auto refresh"],
+    "homepage": "http://github.com/lce-fr/server-livereload",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Laurent Cetinsoy",
+            "email": "laurent.cetinsoy@gmail.com",
+            "homepage": "http://github.com/lce-fr",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    
+    "scripts": {
+        
+        "install": [
+            "installer.php"
+        ]
+    }
+   
+}
