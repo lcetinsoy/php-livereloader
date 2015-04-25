@@ -19,7 +19,7 @@
     
     "scripts": {
         
-        "install": [
+        "post-install-cmd": [
             "installer.php"
         ]
     }
